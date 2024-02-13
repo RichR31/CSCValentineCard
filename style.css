@@ -1,12 +1,15 @@
 :root {
-  --border-color: rgb(255, 193, 203);
-  --background: rgb(253, 128, 94);
-  --front-bg: rgb(0, 67, 84);
-  --front-bg-darken: rgb(112, 177, 193);
-  --shadow: rgba(0, 0, 0, 0.1);
-  --drop-shadow: rgba(0, 0, 0, 0.5);
-  --text: #331717;
-  --page-bg : #fff3f3;
+  --border-color: rgb(255, 193, 203); /*border of card*/
+  --background: rgb(253, 128, 94); /*background of inside of card*/
+  --front-bg: rgb(0, 67, 84); /*background of front of card */
+  --front-bg-darken: rgb(112, 177, 193); /*shadows*/
+  --shadow: rgba(0, 0, 0, 0.1); /*shadows*/
+  --drop-shadow: rgba(0, 0, 0, 0.5); /*shadows*/
+  --text: #331717; /*text color*/
+  --page-bg : #fff3f3; /*background of the page*/
+  --hrt1: red;    /*color of biggest heart*/
+  --hrt2: rgb(255, 0, 85); /*color of middle heart*/
+  --hrt3: rgb(255, 60, 125); /*color of smallest heart*/
 }
 
 html,
@@ -104,7 +107,7 @@ body {
 
 .heart-1 {
   position: absolute;
-  background-color: red;
+  background-color: var(--hrt1);
   filter: drop-shadow(0px 0px 5px var(--drop-shadow));
   height: 100px;
   width: 100px;
@@ -115,7 +118,7 @@ body {
 .heart-1:after {
   content: "";
   position: absolute;
-  background-color: red;
+  background-color: var(--hrt1);
   border-radius: 50%;
   height: 100px;
   width: 100px;
@@ -129,7 +132,7 @@ body {
 
 .heart-2 {
   position: absolute;
-  background-color: rgb(255, 0, 85);
+  background-color: var(--hrt2);
   filter: drop-shadow(0px 0px 5px var(--drop-shadow));
   height: 80px;
   width: 80px;
@@ -142,7 +145,7 @@ body {
 .heart-2:after {
   content: "";
   position: absolute;
-  background-color: rgb(255, 0, 85);
+  background-color: var(--hrt2);
   border-radius: 50%;
   height: 80px;
   width: 80px;
@@ -156,7 +159,7 @@ body {
 
 .heart-3 {
   position: absolute;
-  background-color: rgb(255, 60, 125);
+  background-color: var(--hrt3);
   filter: drop-shadow(0px 0px 5px var(--drop-shadow));
   height: 60px;
   width: 60px;
@@ -169,7 +172,7 @@ body {
 .heart-3:after {
   content: "";
   position: absolute;
-  background-color: rgb(255, 60, 125);
+  background-color: var(--hrt3);
   border-radius: 50%;
   height: 60px;
   width: 60px;
